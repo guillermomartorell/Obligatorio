@@ -8,18 +8,22 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import CharSel from './pages/CharSel';
 
 function App() {
   return (
     <div className="App">
       <Router>
-      <Nav/>
-      <Switch>
-          <Route exact path = '/'>
-            <Home/>
+        <Nav />
+        <Switch>
+          <Route exact path='/'>
+            <Home />
           </Route>
-      </Switch>
-      <Footer/>
+          <Route exact path='/CharacterSelection'>
+            <CharSel />
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
     </div>
   );

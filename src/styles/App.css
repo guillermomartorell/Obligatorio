@@ -242,6 +242,10 @@ footer ul li a:hover {
 }
 .main_home p {max-width: 100%;}
 
+.char_card_header:hover h3{
+  color: #78c6fb;
+}
+
 @media (max-width : 900px) {
   .App {font:normal normal 0.8vw/1.7vw 'Jura'}
   input, textarea{

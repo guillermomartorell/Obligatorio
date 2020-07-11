@@ -1,5 +1,6 @@
 import React from 'react';
 import MainNav from './MainNav'
+/* import NewCharNav from './NewCharNav' */
 import {
     Link,
     useLocation
@@ -7,10 +8,18 @@ import {
 
 function Nav (props){
     const location = useLocation();
+    let characters = <Link to='/CharacterSelection' className="droplink blue">Characters</Link>
     let navSwitch = ""
     if (location.pathname === '/'){
         navSwitch = <MainNav/>
     }
+    if (location.pathname === '/CharacterSelection'){
+        characters = <Link to='' className="droplink active">Characters</Link>
+        navSwitch = <MainNav/>
+    }
+  /*   if (location.pathname === '/NewChar'){
+        navSwitch = <NewCharNav onChange={console.log("test")}/>
+    } */
 
     
     return (
@@ -26,6 +35,7 @@ function Nav (props){
             <ul className="profile_drop">
                 <li><Link className="droplink red" to='#'>Profile</Link></li>
                 <li><Link to='#' className="droplink green">Campaigns</Link></li>
+                <li>{characters}</li>
                 <li><Link to='#' className="droplink orange">Sign Out</Link></li>
             </ul>
         </li>
