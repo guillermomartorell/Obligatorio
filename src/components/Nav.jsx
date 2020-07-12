@@ -18,7 +18,7 @@ function Nav (props){
         navSwitch = <MainNav/>
     }
     if (location.pathname === '/NewCharacter'){
-        navSwitch = <NewCharNav onChange={console.log("test")}/>
+        navSwitch = <NewCharNav/>
     }
  
     return (

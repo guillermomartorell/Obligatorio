@@ -76,7 +76,7 @@ function NewChar (){
                     <span className="field_title">MISC MODIFIER</span>
                 </div>
                 <div className="ac">
-                    <span className="ability_name"><h3>AC<Link className="anchor" name="ac"></Link></h3>ARMOR CLASS</span>
+                    <span className="ability_name"><h3>AC<Link to="/NewCharacter" className="anchor" name="ac"></Link></h3>ARMOR CLASS</span>
                     <input className="total" type="text" name="" id=""/>
                     <span className="gap_symbol">=</span>
                     <span className="gap_symbol larger">10</span>
@@ -116,7 +116,7 @@ function NewChar (){
                     </div>
                 </div>
                 <div className="save">
-                    <h3 className="field_title span_col3">SAVING THROWS<Link className="anchor" name="base_saves"></Link></h3>
+                    <h3 className="field_title span_col3">SAVING THROWS<Link to="/NewCharacter" className="anchor" name="base_saves"></Link></h3>
                     <span className="field_title">TOTALS</span>
                     <span className="field_title span_col3">BASE<br/>SAVE</span>
                     <span className="field_title">ABBILITY<br/>MODIFIER</span>
@@ -162,7 +162,7 @@ function NewChar (){
                     <input type="text" name="" id=""/>
                 </div>
                 <div className="bab">
-                    <span className="ability_name span_col3"><h3>BASE ATTACK BONUS<Link className="anchor" name="bab"></Link></h3></span>
+                    <span className="ability_name span_col3"><h3>BASE ATTACK BONUS<Link to="/NewCharacter" className="anchor" name="bab"></Link></h3></span>
                     <input className="total span_col3" type="text" name="" id=""/>
                     <span className="ability_name"><strong>SPELL<br/>RESISTANCE</strong></span>
                     <input className="total span_col2" type="text" name="" id=""/>
@@ -200,7 +200,7 @@ function NewChar (){
             </section>
             <section className="sheet_right">
                 <div className="speed">
-                    <span className="ability_name"><h3>SPEED<Link className="anchor" name="speed"></Link></h3>LAND</span>
+                    <span className="ability_name"><h3>SPEED<Link  to="/NewCharacter"  className="anchor" name="speed"></Link></h3>LAND</span>
                     <div className="span_col2">
                         <em className="inside_title inside_middle">FT.</em>
                         <em className="inside_title">SQ.</em>

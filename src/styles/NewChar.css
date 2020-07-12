@@ -173,6 +173,7 @@ em.inside_title{
     grid-template-columns: 2fr 1fr 0.1fr 0.3fr repeat(7, 0.1fr 1fr);
     grid-template-rows: 0.1fr 0.1fr;
     gap: 2px 5px;
+    margin-top: 20px;
 }
 .ac span.ability_name, .touch span.ability_name{
     font-size: smaller;

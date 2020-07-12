@@ -7,7 +7,7 @@ function Skills (){
 
 return (
     <div className="skills">
-        <span className="ability_name"><h3>SKILLS<Link className="anchor" name="skills"></Link></h3></span>
+        <span className="ability_name"><h3>SKILLS<Link to="/NewCharacter" className="anchor" name="skills"></Link></h3></span>
         <span className="field_title larger">SKILL NAMES</span>
         <span className="field_title">TOTAL<br/>BONUS</span>
         <span className="field_title">ABILITY<br/>MOD.</span>
