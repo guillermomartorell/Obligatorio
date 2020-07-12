@@ -1,6 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was includes the frontend client side app bootstrapped with [Create React App] (https://github.com/facebook/create-react-app).
+And a mockup server bootstrapped with [JSON Server] (https://github.com/typicode/json-server)
+This project uses NPM manager to install all dependencies, don't forget to run  {### `npm install`} on both the root folder and the '/server' folder.  
 
 ## Available Scripts
+
+In the "/server" folder inside the project directory, you can run:
+
+### `npm start`
+
+Runs the fake REST API server.<br />
+Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
 In the project directory, you can run:
 

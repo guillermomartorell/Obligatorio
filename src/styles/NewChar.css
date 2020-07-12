@@ -71,6 +71,9 @@
     display: block;
     width: 100%;
     padding: 2px 0;
+    line-height: inherit;
+    font-size: inherit;
+    color: inherit;
 }
 .skills > input[type='checkbox']{
     -webkit-appearance: checkbox;
@@ -101,7 +104,7 @@
     color: black;
     align-self: end;
 }
-span.ability_name{
+.ability_name{
     text-align: center;
     background-color: #1c1c1c;
     color: white;
@@ -175,7 +178,7 @@ em.inside_title{
     gap: 2px 5px;
     margin-top: 20px;
 }
-.ac span.ability_name, .touch span.ability_name{
+.ac .ability_name, .touch .ability_name{
     font-size: smaller;
     min-width: 44px;
 }
@@ -229,8 +232,11 @@ span.larger{
 .bab > span> strong, .bab > span > h3{
     padding: 2% 0;
 }
-.bab > div, .bab span:nth-child(3){
+.bab > div, .bab span:nth-child(3), .span_4{
     grid-column: span 4;
+}
+.span_5{
+    grid-column: span 5;
 }
 .bab em.inside_title{
     top: 2%;
@@ -274,7 +280,7 @@ span.larger{
     text-align: left;
     align-self: center;
 }
-.skills span.ability_name{
+.skills .ability_name{
     grid-column: 1/-1;
 }
 .skills span:nth-child(2){
@@ -426,8 +432,8 @@ span.larger{
       display: flex;
       flex-flow: row wrap;
   }
-  .ac span.ability_name, .ac input.total, .save span.ability_name, 
-  .save input.total, .save h3.field_title, .bab span.ability_name, 
+  .ac .ability_name, .ac input.total, .save .ability_name, 
+  .save input.total, .save h3.field_title, .bab .ability_name, 
   .bab input.total, .speed .ability_name, .speed .total {display: block;width: 100%;}
   .ac span, .ac input, .save span, .save input, .save div, .save h3, 
   em.inside_title, .bab span, .bab input, .bab textarea, .speed span, 
