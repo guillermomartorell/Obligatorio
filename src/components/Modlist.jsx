@@ -1,7 +1,9 @@
 import React from "react";
 import CasterMods from "./CasterMods";
 import { Collapse, Card, Typography, Input, Button } from "antd";
+
 const { Title } = Typography;
+const { TextArea } = Input;
 
 function Modlist() {
 	const [externalMods, changeState] = React.useState([]);
@@ -48,7 +50,17 @@ function Modlist() {
 				);
 		}
 	}
-	const renderModifiers = externalMods.map(function (mods) {
+	const handleDelete = (modId) => {
+		return function () {
+			fetch(`http://localhost:4000/casterModsSR/${modId}`, {
+				method: "delete",
+			})
+				.then(() => {
+					fetchFromServer()
+				});
+		}
+	}
+	const renderModifiers = externalMods.map(function (mods, index) {
 		return (
 			<CasterMods
 				modName={mods.name}
@@ -57,6 +69,8 @@ function Modlist() {
 				modSum={mods.sum}
 				modId={mods.id}
 				onChange={handleSwitchChange}
+				onClick={handleDelete}
+				key={index}
 			/>
 		);
 
@@ -80,8 +94,12 @@ function Modlist() {
 				},
 				method: "POST",
 				body: JSON.stringify(modifier),
-			});
-			changeState([...externalMods, modifier])
+			})
+				.then(() => {
+					changeState([...externalMods, modifier])
+					fetchFromServer()
+				}
+				);
 		}
 	};
 	const handleChangename = function (event) {
@@ -90,6 +108,9 @@ function Modlist() {
 	const handleChangemod = function (event) {
 		editModifier({ ...modifier, mod: event.target.value });
 	};
+	const handleChangedescr = function (event) {
+		editModifier({ ...modifier, descr: event.target.value });
+	};
 	return (
 		<div>
 			<Card size="small">
@@ -97,26 +118,32 @@ function Modlist() {
 			</Card>
 			<Collapse>{renderModifiers}</Collapse>
 			<form onSubmit={sendForm} className="addnew">
-				<Input
-					allowClear
-					placeholder="Add modifier"
-					onChange={handleChangename}
-					value={modifier.name}
-				/>
-				<div className="ant-input-number">
-					<div className="ant-input-number-input-wrap">
-						<input
-							allowClear
-							type="number"
-							placeholder="0"
-							onChange={handleChangemod}
-							value={modifier.mod}
-							class="ant-input-number-input"
-							autocomplete="off"
-						/>
+				<div>
+					<Input
+						allowClear
+						placeholder="Add modifier"
+						onChange={handleChangename}
+						value={modifier.name}
+					/>
+					<div className="ant-input-number">
+						<div className="ant-input-number-input-wrap">
+							<input
+								type="number"
+								placeholder="0"
+								onChange={handleChangemod}
+								value={modifier.mod}
+								className="ant-input-number-input"
+							/>
+						</div>
 					</div>
+					<Button htmlType="submit">Add</Button>
 				</div>
-				<Button htmlType="submit">Add</Button>
+				<TextArea
+					rows={2}
+					value={modifier.descr}
+					onChange={handleChangedescr}
+					placeholder="A description if you'd like"
+				/>
 			</form>
 		</div>
 	);

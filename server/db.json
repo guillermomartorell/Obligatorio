@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Caster Level",
       "mod": 13,
-      "sum": false,
+      "sum": true,
       "descr": "A spell’s power often depends on its caster level, which for most spellcasting characters is equal to her class level in the class she’s using to cast the spell. \n You can cast a spell at a lower caster level than normal, but the caster level you choose must be high enough for you to cast the spell in question, and all level-dependent features must be based on the same caster level. \n In the event that a class feature or other special ability provides an adjustment to your caster level, that adjustment applies not only to effects based on caster level (such as range, duration, and damage dealt), but also to your caster level check to overcome your target’s spell resistance and to the caster level used in dispel checks (both the dispel check and the DC of the check)."
     },
     {
@@ -25,7 +25,7 @@
       "id": 4,
       "name": "Numerology Cylinder",
       "mod": 2,
-      "sum": false,
+      "sum": true,
       "descr": "This cylindrical puzzle has eight faces and a dozen rings along its length that can be spun individually, each with different numbers on each face.\nThe user of a numerology cylinder can twist and turn these rings into a multitude of combinations.\nAs a full-round action, the user can try to find a new combination with particular numeric significance by attempting a DC 25 Knowledge (arcana) or DC 20 Intelligence check.\nIf she finds one, she gains a +2 insight bonus on caster level checks (such as to overcome spell resistance) for 24 hours.\nOn a failed check, the faces lock and the cylinder can’t be used again for 24 hours."
     },
     {
@@ -55,20 +55,6 @@
       "mod": 2,
       "sum": true,
       "descr": "Your spells break through spell resistance more easily than most.\nBenefit: You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature’s spell resistance."
-    },
-    {
-      "id": 9,
-      "name": "New Modifier",
-      "mod": "100",
-      "sum": false,
-      "descr": ""
-    },
-    {
-      "id": 10,
-      "name": "Manzana",
-      "mod": "2",
-      "sum": true,
-      "descr": ""
     }
   ],
   "casterModslvl": [
