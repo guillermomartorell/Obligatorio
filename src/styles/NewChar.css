@@ -1,0 +1,433 @@
+#character_sheet_details img{
+    max-width: 300px;
+    max-height: 81.6px;
+}
+#character_sheet_details section{
+    text-align: center;
+    margin-right: 20px;
+    flex: 1;
+}
+#character_sheet_details h1{
+    font-size: 1.5vw;
+    color: black;
+    border: none;
+    padding: 0;
+}
+#character_sheet_details{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: whitesmoke;
+    grid-area: header;
+}
+#character_sheet_wrapper{
+    display: grid;
+    grid-template-areas:
+        "nav nav"
+        "header header"
+        "col-left col-right"
+        "footer footer";
+    grid-template-columns: 49.5% 49.5%;
+    gap: 0 1.5%;
+    padding: 0 20px 20px 20px;
+    margin: 0 20px;
+    background: whitesmoke;
+}
+.sheet_left{
+    grid-area: col-left;
+    display: grid;
+    grid-template-areas:
+        "stats hp"
+        "stats initiative"
+        "ac ac"
+        "touch touch"
+        "save save"
+        "bab bab";
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    grid-auto-rows: min-content;
+}
+.sheet_right{
+    grid-area: col-right;
+}
+.char_details {
+    display: grid;
+    grid-template: repeat(3, auto)/ repeat(9, auto);
+    column-gap: 2%;
+    flex: 8;
+    min-width: 500px;
+}
+.char_details div, .char_details span{
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+}
+.span_col2{
+    grid-column: span 2;
+}
+.char_details div input, .skills > input, .skills > input[type='number'], .skills > div >input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #1c1c1c;
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+}
+.skills > input[type='checkbox']{
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+}
+.skills h3{
+    padding: 1vw 0;
+}
+.skills > input::-webkit-outer-spin-button,
+.skills > input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.flexible{
+    display: flex;
+    flex-wrap: wrap;
+}
+#character_sheet_wrapper section .stat_grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 1% 2%;
+    text-align: center;
+    grid-area: stats;
+    grid-template-rows: repeat(7,0.1fr);
+}
+.field_title{
+    background-color: transparent;
+    color: black;
+    align-self: end;
+}
+span.ability_name{
+    text-align: center;
+    background-color: #1c1c1c;
+    color: white;
+    padding: 0 2px;
+}
+.init_cont .ability_name, .init_cont span:nth-child(1){
+    margin-right: 10px;
+}
+.hp_cont{
+    position: relative;
+    display: grid;
+    gap: 0 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr 1fr;
+    grid-area: hp;
+}
+.hp_cont span:nth-child(4), .hp_cont textarea:nth-child(5), 
+.hp_cont span:nth-child(6), .hp_cont input:nth-child(7), .span_col3{
+    grid-column: span 3;
+}
+.hp_cont input, .ac input, .touch input, .save input, 
+.bab input, .bab textarea, .speed input, .speed .field_title, 
+.speed textarea, .skills input, .stat_grid input, .init_cont input{
+    width: 100%;
+    height: 100%;   
+}
+.hp_cont > div > input{
+    padding-left: 45px;
+}
+.hp_cont > div, .touch > div, .bab > div, .speed > div {
+    position: relative;
+}
+em.inside_title{
+    position: absolute;
+}
+.hp_cont em.inside_title{
+    top: 2%;
+    left: 2%;
+}
+.init_cont span, .ac span, nav ul li, footer ul li, .ac input, .stat_grid input, .init_cont input, .save span, .save h3{
+    text-align: center;
+}
+.init_cont{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr 2fr 0.5fr 2fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    grid-area: initiative;
+    margin-top: 10px;
+}
+.init_cont span, .ac span, .bab span{
+    align-self: start;
+}
+.init_cont span:nth-child(3), .init_cont span:nth-child(5), 
+.hp_cont span:nth-child(4), .hp_cont span:nth-child(6), .ac .gap_symbol{
+    align-self: center;
+}
+.init_cont span:nth-child(7){
+    grid-column: 2;
+}
+.init_cont span:nth-child(8){
+    grid-column: 4;
+}
+.init_cont span:nth-child(9){
+    grid-column: 6;
+}
+.ac{
+    grid-area: ac;
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.1fr 0.3fr repeat(7, 0.1fr 1fr);
+    grid-template-rows: 0.1fr 0.1fr;
+    gap: 2px 5px;
+}
+.ac span.ability_name, .touch span.ability_name{
+    font-size: smaller;
+    min-width: 44px;
+}
+span.larger{
+    font-size: 1.2vw;
+}
+.ac input{
+    text-align: center;
+}
+.touch{
+    grid-area: touch;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 2fr 1fr 4fr;
+    gap: 5px;
+}
+.touch em.inside_title{
+    right: 2%;
+    top: 2%;
+}
+.save{
+    grid-area: save;
+    display: grid;
+    grid-template-columns: 3fr repeat(7, 1fr 0.2fr) 1fr;
+    gap: 5px;
+}
+.save > div{
+    grid-row: span 4;
+    position: relative;
+}
+.save > div > em{
+    right: 2%;
+    top: 7%;
+}    
+.save > div > textarea{
+    height: 94%;
+    margin-top: 5%;
+    padding-top: 20px;
+}
+.bab{
+    grid-area: bab;
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.2fr repeat(4, 1fr 0.1fr) 1fr;
+    gap: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+.bab > .gap_symbol{
+    align-self: center;
+}
+.bab > span> strong, .bab > span > h3{
+    padding: 2% 0;
+}
+.bab > div, .bab span:nth-child(3){
+    grid-column: span 4;
+}
+.bab em.inside_title{
+    top: 2%;
+    right: 2%;
+}
+.bab > div > textarea{
+    padding-top: 15px;
+}
+.bab > .ability_name:nth-child(5), .bab > .ability_name:nth-child(18) {
+    height: 50%;
+}
+.span_row2{
+    grid-row: span 2;
+}
+.span_row3{
+    grid-row: span 3;
+}
+
+.speed{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 0.3fr 1fr;
+    text-align: center;
+    gap: 1px 5px;
+}
+.speed > div > em{
+    bottom: 2%;
+    right: 2%;
+}
+.speed > div > em.inside_middle{
+    right: 50%;
+}
+.skills{
+    display: grid;
+    grid-template-columns: 0.3fr 6fr repeat(3, 1fr) repeat(2, 0.2fr 1fr);
+    text-align: center;
+    gap: 2px 10px;
+    margin-top: 10px;
+}
+.skills > span.larger{
+    text-align: left;
+    align-self: center;
+}
+.skills span.ability_name{
+    grid-column: 1/-1;
+}
+.skills span:nth-child(2){
+    grid-column: 2;
+}
+.skills span:nth-child(4){
+    grid-column: 5;
+}
+.skills span:nth-child(5){
+    grid-column: 7;
+}
+.skills span:nth-child(6){
+    grid-column: 9;
+}
+.skills > div{
+    display: flex;
+    justify-content: space-between;
+}
+.skills > div > span{
+    align-self: center;
+    text-align: left;
+    width: 30%;
+}
+.skills > div > input{
+    width: 70%;
+    
+}
+
+@media (max-width : 900px) {
+    .App {font:normal normal 0.8vw/1.7vw 'Jura'}
+    input, textarea{
+        font-size: 1.9vw;
+    }
+    .char_details {
+        min-width: 70vw;
+    }
+    .char_details div, .char_details span{
+        font-size: 1.8vw;
+    }
+    h3, strong{
+        font-size: 1.9vw;
+        line-height: 1.9vw;
+    }
+    span, div, em{
+        font-size: 1.4vw;
+    }
+    #character_sheet_wrapper {
+        grid-template-areas: "nav" "header" "col-left""col-right" "footer";
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+    .sheet_left {
+        grid-area: col-left;
+        margin: 0;
+        grid-template-areas: "stats hp" "stats initiative" "ac ac" "touch touch" "save save" "bab bab";
+        grid-template-columns: 50% 50%;
+    }
+    .sheet_right{margin:0;}
+    .nav_profile span.profile_name{
+        font-size: 1.7vw;
+    }
+    nav a, footer ul li a {font-size: 2.5vw; padding: 1.5vw 1.75vw;}
+    span.larger {
+        font-size: 2vw;
+        line-height: 3.2vw;
+    }
+    .search_nav a{
+        width: 5vw;
+        height: 5vw;
+    }
+    nav a.home{
+        background-size: 4.8vw;
+        width: 5vw;
+        height: 5vw;
+    }
+    .card_holder li.char_card_wrap {
+        width: 50%;
+        max-width: 50%;
+    }
+  }
+
+@media (max-width : 600px)  {
+    .App {font:normal normal 0.8vw/1.7vw 'Jura'}
+    .char_details {
+        min-width: 70vw;
+    }
+    .hp_cont{
+        margin-top: 20px;
+    }
+    input, textarea{
+        font-size: 1.9vw;
+    }
+    h3, strong{
+        font-size: 1.9vw;
+        line-height: 1.9vw;
+    }
+    span, div, em{
+        font-size: 1.6vw;
+    }
+    p, label{
+        font-size: 2vw;
+        line-height: 2.5vw;
+    }
+    #character_sheet_wrapper {
+        grid-template-areas:"nav" "header" "col-left""col-right" "footer";
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+    .sheet_left {
+        grid-area: col-left;
+        margin: 0;
+        grid-template-areas: "stats""hp" "initiative" "ac" "touch" "save" "bab";
+        grid-template-columns: 100%;
+    }
+    .sheet_right{margin:0;}
+    
+    .char_details div, .char_details span{
+        font-size: 2.8vw;
+        line-height: 3.2vw;
+    }
+    .card_holder li.char_card_wrap, .speed > div{
+        width: 100%;
+        max-width: 100%;
+    }
+    
+  }
+@media (max-device-width: 400px){
+  .sheet_left, .sheet_right {
+      margin: 0;
+  }
+  span, div, .save h3.field_title{
+      font-size: 2vw;
+      line-height: 3vw;
+  }
+  .speed > div{
+      width: 100%;
+      max-width: 100%;
+  }
+  .char_card_header h3, strong{
+      font-size: 3vw;
+      line-height: 3.8vw;
+  }
+  .char_card_header span, .campaign_link a {
+      font-size: 2vw;
+      line-height: 2.8vw;
+  }
+ 
+  .ac, .save, .bab, .speed{
+      display: flex;
+      flex-flow: row wrap;
+  }
+  .ac span.ability_name, .ac input.total, .save span.ability_name, 
+  .save input.total, .save h3.field_title, .bab span.ability_name, 
+  .bab input.total, .speed .ability_name, .speed .total {display: block;width: 100%;}
+  .ac span, .ac input, .save span, .save input, .save div, .save h3, 
+  em.inside_title, .bab span, .bab input, .bab textarea, .speed span, 
+  .speed input, .speed textarea{display: none;}
+}

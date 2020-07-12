@@ -9,6 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import CharSel from './pages/CharSel';
+import NewChar from './pages/NewChar';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path='/CharacterSelection'>
             <CharSel />
+          </Route>
+          <Route exact path='/NewCharacter'>
+            <NewChar />
           </Route>
         </Switch>
         <Footer />

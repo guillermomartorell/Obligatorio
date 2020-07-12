@@ -12,7 +12,7 @@ function Home() {
             <div className="campaign_container">
                 <ul className="card_holder">
                     <CampCard
-                        backImg="./img/aratBack.png"
+                        backImg="./img/pecheBack.jpg"
                         campName="Peche's World Campaign"
                         nChar="6"
                     />

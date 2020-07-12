@@ -19,14 +19,14 @@
     display: flex;
 }
 .search_nav a{
-    width: 2vw;
-    height: 2vw;
+    width: 25px;
+    height: 25px;
     background: url(./img/search.png) no-repeat;
-    background-size: 80% 96%;
+    background-size: 100% 100%;
 }
 .search_nav a:hover{
     background: url(./img/searchHover.png) no-repeat;
-    background-size: 96% 96%;
+    background-size: 100% 100%;
 }
 .search_nav input{
     background: transparent;
@@ -124,9 +124,7 @@ img.hid_big{
     display: block;
     height: 200%;
 }
-.char_card_header a:hover h3{
-    color: #78c6fb;
-}
+
 .char_card_header h3{
     color: #fff;
     font-size: 1.7vw;
@@ -163,6 +161,9 @@ img.hid_big{
 }
 .campaign_link .red_highlight{
     margin-left: auto;
+}
+.char_card{
+    background-size: cover;
 }
 .char_card strong{
     text-shadow: 1px 1px black;

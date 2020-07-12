@@ -18,7 +18,7 @@ function CharSel() {
                     <li><Link to='/CharacterSelection'>Peche's World</Link></li>
                     <li className="bread">-</li>
                     <li><Link to='#' className="active" >My Characters</Link></li>
-                    <li className="last"><Link to='/NewChar' className="new_sheet">CREATE A CHARACTER</Link></li>
+                    <li className="last"><Link to='/NewCharacter' className="new_sheet">CREATE A CHARACTER</Link></li>
                 </ul>
             </nav>
             <header>

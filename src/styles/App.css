@@ -285,8 +285,8 @@ footer ul li a:hover {
       line-height: 3.2vw;
   }
   .search_nav a{
-      width: 5vw;
-      height: 5vw;
+      width: 15px;
+      height: 15px;
   }
   nav a.home{
       background-size: 4.8vw;
