@@ -1,5 +1,5 @@
-This project was includes the frontend client side app bootstrapped with [Create React App] (https://github.com/facebook/create-react-app).
-And a mockup server bootstrapped with [JSON Server] (https://github.com/typicode/json-server)
+This project includes the frontend client side app bootstrapped with [Create React App] (https://github.com/facebook/create-react-app,
+and a mockup server bootstrapped with [JSON Server] (https://github.com/typicode/json-server)
 This project uses NPM manager to install all dependencies, don't forget to run  {### `npm install`} on both the root folder and the '/server' folder.  
 
 ## Available Scripts
