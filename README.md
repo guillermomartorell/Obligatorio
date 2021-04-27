@@ -1,6 +1,6 @@
 ## MathfinderBuilder  powered by CRA
 
-Live DEMO @ ### http://mathfinderbuilder.web.app/
+Live DEMO @ http://mathfinderbuilder.web.app/
 
 This project includes the frontend client side app bootstrapped with [Create React App] 
 
