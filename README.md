@@ -1,4 +1,8 @@
-This project includes the frontend client side app bootstrapped with [Create React App] (https://github.com/facebook/create-react-app,
+## MathfinderBuilder  powered by CRA
+
+Live DEMO @ http://mathfinderbuilder.web.app/
+
+This project includes the frontend client side app bootstrapped with [Create React App] 
 
 
 This project uses NPM manager to install all dependencies, don't forget to run  {### `npm install`} 
